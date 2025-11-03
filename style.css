@@ -1,0 +1,256 @@
+@font-face {
+    font-family: 'Koodak'; /* Changed font name to Koodak */
+    src: url('fonts/Koodak.eot');
+    src: url('fonts/Koodak.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Koodak.woff2') format('woff2'),
+         url('fonts/Koodak.woff') format('woff'),
+         url('fonts/Koodak.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Koodak', Arial, sans-serif; /* Changed font name to Koodak */
+    background-color: #fdfcff; /* A very light, almost white lavender */
+    color: #444; /* Softer black for text */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.theme-toggle img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #2c2c3e;
+    color: #f0f0f0;
+}
+
+body.dark-mode .container {
+    background-color: rgba(58, 58, 80, 0.8); /* Semi-transparent dark color */
+}
+
+body.dark-mode header h1,
+body.dark-mode .playlist h2 {
+    color: #a881ff;
+}
+
+body.dark-mode .player__details h2 {
+    color: #f0f0f0;
+}
+
+body.dark-mode .time-container {
+    color: #aaa;
+}
+
+body.dark-mode .playlist li {
+    border-bottom-color: #4a4a6a;
+}
+
+body.dark-mode .playlist li.active {
+    background-color: #4a4a6a;
+    color: #c3aeff;
+}
+
+body.dark-mode .theme-toggle {
+    background-color: #3a3a50;
+    border-color: #4a4a6a;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1); /* Stronger, glass-like shadow */
+    backdrop-filter: blur(10px); /* Glass effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.18); /* Subtle border */
+    padding: 20px;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 1.9em;
+    color: #7c5cbf; /* A playful purple */
+    font-weight: 700;
+    letter-spacing: 1px; /* Adds a bit of air */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.05); /* Subtle shadow */
+}
+
+.player {
+    text-align: center;
+}
+
+.player__artwork {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    /* The shadow is now on the image itself */
+}
+
+.player__artwork img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px; /* Rounded corners for the image */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* A more attractive shadow */
+}
+
+.player__details h2 {
+    font-size: 1.5em;
+    font-weight: 500; /* A bit lighter */
+    margin: 0;
+    color: #333;
+}
+
+.player__details p {
+    font-size: 0.9em;
+    color: #888;
+    margin: 5px 0 20px;
+}
+
+.player__controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.control-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    transition: filter 0.3s;
+}
+
+.control-btn img {
+    width: 30px;
+    height: 30px;
+}
+
+#play-pause-btn {
+    background-color: transparent; /* Removed pink background */
+    border-radius: 50%;
+    padding: 15px;
+}
+
+#play-pause-btn img {
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+
+.player__progress {
+    margin-bottom: 20px;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 5px;
+    background-color: #eee;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    direction: ltr; /* Ensures the bar fills from left to right */
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background-color: #9d82db; /* Lighter purple for progress */
+    border-radius: 5px;
+}
+
+body.dark-mode .control-btn img {
+    filter: invert(1); /* Invert icon colors for dark mode */
+}
+
+body.dark-mode .control-btn img {
+    filter: none; /* Removed filter to prevent color inversion */
+}
+
+body.dark-mode .progress-bar {
+    background-color: #c3aeff;
+}
+
+.time-container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+    color: #888;
+}
+
+.playlist {
+    margin-top: 30px;
+}
+
+.playlist h2 {
+    font-size: 1.3em;
+    color: #7c5cbf;
+    margin-bottom: 10px;
+    font-weight: 600;
+    border-bottom: 2px solid #f0eaff;
+    padding-bottom: 5px;
+}
+
+.playlist ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 150px; /* Adjusted height for better layout */
+    overflow-y: auto;
+}
+
+.playlist li {
+    padding: 12px 10px; /* A bit more padding */
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 400; /* Regular weight */
+}
+
+.playlist li:hover {
+    background-color: #f0f0f0;
+}
+
+.playlist li.active {
+    background-color: #f0eaff; /* Light purple background */
+    color: #7c5cbf; /* Darker purple text */
+    font-weight: 600; /* Bolder for active item */
+}

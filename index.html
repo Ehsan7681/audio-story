@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>داستان‌های صوتی کودکانه</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="theme-toggle" id="theme-toggle">
+        <img src="icons/moon.svg" alt="Toggle Theme">
+    </button>
+    <div class="container">
+        <header>
+            <h1>داستان‌های صوتی کودکانه</h1>
+        </header>
+        <main>
+            <div class="player">
+                <div class="player__artwork">
+                    <img src="" alt="Story Artwork" id="artwork">
+                </div>
+                <div class="player__details">
+                    <h2 id="title">انتخاب داستان</h2>
+                    <p id="artist">راوی</p>
+                </div>
+                <div class="player__progress">
+                    <div class="progress-bar-container">
+                        <div class="progress-bar"></div>
+                    </div>
+                    <div class="time-container">
+                        <span id="duration">0:00</span>
+                        <span id="current-time">0:00</span>
+                    </div>
+                </div>
+                <audio id="audio" src=""></audio>
+                <div class="player__controls">
+                    <button class="control-btn" id="next-btn">
+                        <img src="icons/next.svg" alt="Next">
+                    </button>
+                    <button class="control-btn" id="play-pause-btn">
+                        <img src="icons/play.svg" alt="Play" id="play-pause-icon">
+                    </button>
+                    <button class="control-btn" id="prev-btn">
+                        <img src="icons/previous.svg" alt="Previous">
+                    </button>
+                </div>
+            </div>
+            <div class="playlist">
+                <h2>لیست داستان‌ها</h2>
+                <ul id="playlist">
+                    <!-- Stories will be loaded here by JavaScript -->
+                </ul>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
