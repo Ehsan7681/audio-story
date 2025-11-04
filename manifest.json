@@ -1,0 +1,16 @@
+{
+  "name": "داستان‌های صوتی کودکانه",
+  "short_name": "داستان صوتی",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fdfcff",
+  "theme_color": "#7c5cbf",
+  "description": "یک برنامه وب برای پخش داستان‌های صوتی کودکانه.",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
