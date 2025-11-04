@@ -254,3 +254,17 @@ body.dark-mode .progress-bar {
     color: #7c5cbf; /* Darker purple text */
     font-weight: 600; /* Bolder for active item */
 }
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 0.7em;
+    color: #aaa;
+}
+
+body.dark-mode footer p {
+    color: #777;
+}
