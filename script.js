@@ -84,6 +84,10 @@ document.addEventListener('DOMContentLoaded', () => {
         audio.src = story.audioSrc;
         updatePlaylist();
 
+        // Reset progress bar and time display
+        progressBar.style.width = '0%';
+        currentTimeEl.textContent = '0:00';
+        
         // Reset player state to paused when a new story is loaded
         isPlaying = false;
         playPauseIcon.src = 'icons/play.svg';
