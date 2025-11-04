@@ -40,6 +40,36 @@ document.addEventListener('DOMContentLoaded', () => {
             artist: 'قصه‌گو',
             audioSrc: 'audio/story4.mp3',
             artworkSrc: 'images/story4.jpg'
+        },
+        {
+            title: '    قصه فلفل تند و تيز ',
+            artist: 'قصه‌گو',
+            audioSrc: 'audio/story5.mp3',
+            artworkSrc: 'images/story5.jpg'
+        },
+        {
+            title: '    قصه دختر مو طلایی ',
+            artist: 'قصه‌گو',
+            audioSrc: 'audio/story6.mp3',
+            artworkSrc: 'images/story6.png'
+        },
+        {
+            title: '    قصه خواهر و برادر ',
+            artist: 'قصه‌گو',
+            audioSrc: 'audio/story7.mp3',
+            artworkSrc: 'images/story7.png'
+        },
+        {
+            title: '      قصه الاغ شکمو  ',
+            artist: 'قصه‌گو',
+            audioSrc: 'audio/قصه-الاغ-شکمو.mp3',
+            artworkSrc: 'images/قصه-الاغ-شکمو.png'
+        },
+        {
+            title: '       میمون و پلنگ   ',
+            artist: 'قصه‌گو',
+            audioSrc: 'audio/میمون-و-پلنگ.mp3',
+            artworkSrc: 'images/میمون-و-پلنگ.png'
         }
     ];
 
