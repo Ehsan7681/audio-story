@@ -128,7 +128,12 @@ header h1 {
     height: 100%;
     object-fit: cover;
     border-radius: 15px; /* Rounded corners for the image */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* A more attractive shadow */
+    /* Initial 3D/Orb effect using multiple shadows */
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.15), /* Outer shadow for lift */
+        inset 0 0 15px rgba(255, 255, 255, 0.5), /* Inner highlight (top-left light source) */
+        inset 0 0 10px rgba(0, 0, 0, 0.2); /* Inner shadow (bottom-right depth) */
+    transition: border-radius 0.5s, box-shadow 0.5s;
 }
 
 .player__details h2 {
@@ -144,11 +149,105 @@ header h1 {
     margin: 5px 0 20px;
 }
 
+.player__speed-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px; /* Space between speed control and main controls */
+    gap: 10px;
+}
+
+.player__speed-control label {
+    font-size: 0.9em;
+    color: #666;
+}
+
+body.dark-mode .player__speed-control label {
+    color: #ccc;
+}
+
+.player__speed-control select {
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle, semi-transparent border */
+    border-radius: 12px; /* More rounded corners */
+    padding: 8px 15px; /* Increased padding */
+    font-family: 'Koodak', Arial, sans-serif;
+    font-size: 1em; /* Slightly larger font */
+    color: #555; /* Slightly darker text */
+    cursor: pointer;
+    outline: none;
+    appearance: none; /* Remove default select arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: all 0.4s ease-in-out; /* Smooth transition for all properties */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1); /* More prominent shadow */
+    min-width: 90px; /* Ensure a minimum width */
+    text-align: center; /* Center the text */
+    backdrop-filter: blur(8px); /* Glassmorphism blur effect */
+    -webkit-backdrop-filter: blur(8px); /* For Safari */
+}
+
+.player__speed-control select:hover {
+    border-color: rgba(157, 130, 219, 0.6); /* Purple border on hover, semi-transparent */
+    box-shadow: 0 6px 25px rgba(0,0,0,0.15); /* Enhanced shadow on hover */
+    background-color: rgba(245, 240, 255, 0.8); /* Lighter, semi-transparent background on hover */
+}
+
+.player__speed-control select:focus {
+    border-color: #7c5cbf; /* Stronger purple border on focus */
+    box-shadow: 0 0 0 4px rgba(124, 92, 191, 0.4); /* Focus ring with more transparency */
+    background-color: rgba(255, 255, 255, 0.9); /* More opaque on focus */
+}
+
+body.dark-mode .player__speed-control select {
+    background-color: rgba(58, 58, 80, 0.7); /* Darker semi-transparent background */
+    border-color: rgba(74, 74, 106, 0.5); /* Dark mode border */
+    color: #e0e0e0; /* Light text */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+
+body.dark-mode .player__speed-control select:hover {
+    border-color: rgba(168, 129, 255, 0.6); /* Dark mode purple border on hover */
+    box-shadow: 0 6px 25px rgba(0,0,0,0.4);
+    background-color: rgba(60, 60, 80, 0.8); /* Slightly lighter dark background on hover */
+}
+
+body.dark-mode .player__speed-control select:focus {
+    border-color: #a881ff;
+    box-shadow: 0 0 0 4px rgba(168, 129, 255, 0.4);
+    background-color: rgba(58, 58, 80, 0.9); /* More opaque on focus */
+}
+
+/* Styling for the dropdown options when they are open */
+.player__speed-control select option {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white for options */
+    color: #444; /* Dark text for options */
+    font-family: 'Koodak', Arial, sans-serif;
+    padding: 8px 15px; /* Consistent padding */
+    border-radius: 8px; /* Rounded corners for individual options (may vary by browser) */
+    backdrop-filter: blur(5px); /* Glassmorphism blur for options */
+    -webkit-backdrop-filter: blur(5px);
+    transition: background-color 0.2s ease;
+}
+
+.player__speed-control select option:hover {
+    background-color: rgba(240, 235, 250, 0.95); /* Light purple hover for options */
+}
+
+body.dark-mode .player__speed-control select option {
+    background-color: rgba(45, 45, 60, 0.9); /* Dark semi-transparent background for options in dark mode */
+    color: #f0f0f0; /* Light text for options in dark mode */
+}
+
+body.dark-mode .player__speed-control select option:hover {
+    background-color: rgba(60, 60, 80, 0.95); /* Slightly lighter dark hover for options */
+}
+
 .player__controls {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 40px; /* Further increased gap for more spacing */
 }
 
 .control-btn {
@@ -160,8 +259,8 @@ header h1 {
 }
 
 .control-btn img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 }
 
 #play-pause-btn {
@@ -171,8 +270,8 @@ header h1 {
 }
 
 #play-pause-btn img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     display: block;
 }
 
@@ -274,4 +373,136 @@ body.dark-mode footer {
 
 body.dark-mode footer p {
     color: #666;
+}
+
+/* -------------------------------------------------- */
+/* Playing State Visual Effects */
+/* -------------------------------------------------- */
+
+/* Keyframe for slow rotation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Keyframe for subtle glow/pulse effect */
+@keyframes glow-pulse {
+    0% {
+        /* Increased spread and blur for stronger glow */
+        box-shadow: 0 0 15px 5px rgba(157, 130, 219, 0.7), 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+    50% {
+        /* Max glow state */
+        box-shadow: 0 0 30px 10px rgba(157, 130, 219, 1), 0 8px 30px rgba(0, 0, 0, 0.25);
+    }
+    100% {
+        box-shadow: 0 0 15px 5px rgba(157, 130, 219, 0.7), 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+}
+
+/* -------------------------------------------------- */
+/* Title Typewriter Effect (Width Animation) */
+/* -------------------------------------------------- */
+
+/* Keyframe for typing animation (RTL compatible) */
+@keyframes typing-width {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+.player__details h2 {
+    /* Base styles for typewriter effect */
+    overflow: hidden; /* Hide the text outside the width */
+    white-space: nowrap; /* Prevent text wrapping */
+    margin: 0 auto; /* Center the title */
+    /* Removed border-right for cursor */
+    transition: color 0.3s; /* Keep color transition */
+    text-align: center; /* Ensure text is centered */
+}
+
+.player__details h2.typing {
+    /* This class will be added by JS to start the animation */
+    width: 100%; /* Set width to 100% to allow animation to control it */
+    animation:
+        typing-width 3s steps(40, end) forwards; /* Only typing animation */
+    /* Removed border-right-color */
+}
+
+body.dark-mode .player__details h2.typing {
+    /* Removed border-right-color */
+    animation:
+        typing-width 3s steps(40, end) forwards; /* Only typing animation */
+}
+
+/* Typewriter styles for the Artist/Narrator name */
+.player__details p {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0; /* Start with zero width to hide text */
+    margin: 5px auto 20px; /* Keep original margins */
+    transition: color 0.3s;
+    text-align: center;
+}
+
+.player__details p.typing {
+    width: 100%;
+    animation:
+        typing-width 1.5s steps(20, end) forwards; /* Shorter animation for artist name */
+}
+
+/* Apply effects when the player has the 'playing' class */
+.player.playing .player__artwork img {
+    /* Slow rotation */
+    animation: spin 20s linear infinite;
+    /* Subtle glow pulse */
+    animation-name: spin, glow-pulse;
+    animation-duration: 20s, 2s;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: infinite, infinite;
+    animation-direction: normal, alternate;
+    border-radius: 50%; /* Make it circular when playing */
+    /* Enhance 3D effect when playing */
+    box-shadow:
+        0 0 15px 5px rgba(157, 130, 219, 0.7), /* Stronger outer glow (from glow-pulse) */
+        inset 0 0 20px rgba(255, 255, 255, 0.7), /* Stronger inner highlight */
+        inset 0 0 15px rgba(0, 0, 0, 0.4); /* Stronger inner shadow */
+    transition: border-radius 0.5s, box-shadow 0.5s;
+}
+
+/* Reset border-radius when paused */
+.player .player__artwork img {
+    border-radius: 15px;
+    transition: border-radius 0.5s;
+}
+
+/* Dark Mode Glow */
+body.dark-mode .player.playing .player__artwork img {
+    animation-name: spin, dark-glow-pulse;
+    animation-duration: 20s, 2s;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: infinite, infinite;
+    animation-direction: normal, alternate;
+    /* Enhance 3D effect when playing in dark mode */
+    box-shadow:
+        0 0 15px 5px rgba(195, 174, 255, 0.7), /* Stronger outer glow (from dark-glow-pulse) */
+        inset 0 0 20px rgba(255, 255, 255, 0.2), /* Subtle inner highlight */
+        inset 0 0 15px rgba(0, 0, 0, 0.8); /* Stronger inner shadow for depth */
+}
+
+@keyframes dark-glow-pulse {
+    0% {
+        /* Increased spread and blur for stronger glow */
+        box-shadow: 0 0 15px 5px rgba(195, 174, 255, 0.7), 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+    50% {
+        /* Max glow state */
+        box-shadow: 0 0 30px 10px rgba(195, 174, 255, 1), 0 8px 30px rgba(0, 0, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 15px 5px rgba(195, 174, 255, 0.7), 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
 }
