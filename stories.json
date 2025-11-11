@@ -1,0 +1,242 @@
+[
+    {
+        "id": 1,
+        "title": "قصه شاخ دیوی",
+        "audioFile": "assets/audio/قصه-شاخ-دیوی.mp3",
+        "imageFile": "assets/images/story1.jpg",
+        "duration": "۵:۰۰",
+        "description": "توضیحات کوتاه درباره داستان اول"
+    },
+    {
+        "id": 2,
+        "title": "قصه شماره ۲",
+        "audioFile": "assets/audio/story2.mp3",
+        "imageFile": "assets/images/story2.jpg",
+        "duration": "۶:۳۰",
+        "description": "توضیحات کوتاه درباره داستان دوم"
+    },
+    {
+        "id": 3,
+        "title": "قصه شماره ۳",
+        "audioFile": "assets/audio/story3.mp3",
+        "imageFile": "assets/images/story3.jpg",
+        "duration": "۴:۴۵",
+        "description": "توضیحات کوتاه درباره داستان سوم"
+    },
+    {
+        "id": 4,
+        "title": "قصه شماره ۴",
+        "audioFile": "assets/audio/story4.mp3",
+        "imageFile": "assets/images/story4.jpg",
+        "duration": "۷:۲۰",
+        "description": "توضیحات کوتاه درباره داستان چهارم"
+    },
+    {
+        "id": 5,
+        "title": "قصه شماره ۵",
+        "audioFile": "assets/audio/story5.mp3",
+        "imageFile": "assets/images/story5.jpg",
+        "duration": "۵:۵۰",
+        "description": "توضیحات کوتاه درباره داستان پنجم"
+    },
+    {
+        "id": 6,
+        "title": "قصه شماره ۶",
+        "audioFile": "assets/audio/story6.mp3",
+        "imageFile": "assets/images/story6.jpg",
+        "duration": "۶:۱۰",
+        "description": "توضیحات کوتاه درباره داستان ششم"
+    },
+    {
+        "id": 7,
+        "title": "قصه شماره ۷",
+        "audioFile": "assets/audio/story7.mp3",
+        "imageFile": "assets/images/story7.jpg",
+        "duration": "۵:۴۰",
+        "description": "توضیحات کوتاه درباره داستان هفتم"
+    },
+    {
+        "id": 8,
+        "title": "قصه شماره ۸",
+        "audioFile": "assets/audio/story8.mp3",
+        "imageFile": "assets/images/story8.jpg",
+        "duration": "۶:۵۵",
+        "description": "توضیحات کوتاه درباره داستان هشتم"
+    },
+    {
+        "id": 9,
+        "title": "قصه شماره ۹",
+        "audioFile": "assets/audio/story9.mp3",
+        "imageFile": "assets/images/story9.jpg",
+        "duration": "۵:۲۵",
+        "description": "توضیحات کوتاه درباره داستان نهم"
+    },
+    {
+        "id": 10,
+        "title": "قصه شماره ۱۰",
+        "audioFile": "assets/audio/story10.mp3",
+        "imageFile": "assets/images/story10.jpg",
+        "duration": "۷:۰۰",
+        "description": "توضیحات کوتاه درباره داستان دهم"
+    },
+    {
+        "id": 11,
+        "title": "قصه شماره ۱۱",
+        "audioFile": "assets/audio/story11.mp3",
+        "imageFile": "assets/images/story11.jpg",
+        "duration": "۵:۳۰",
+        "description": "توضیحات کوتاه درباره داستان یازدهم"
+    },
+    {
+        "id": 12,
+        "title": "قصه شماره ۱۲",
+        "audioFile": "assets/audio/story12.mp3",
+        "imageFile": "assets/images/story12.jpg",
+        "duration": "۶:۲۰",
+        "description": "توضیحات کوتاه درباره داستان دوازدهم"
+    },
+    {
+        "id": 13,
+        "title": "قصه شماره ۱۳",
+        "audioFile": "assets/audio/story13.mp3",
+        "imageFile": "assets/images/story13.jpg",
+        "duration": "۵:۱۵",
+        "description": "توضیحات کوتاه درباره داستان سیزدهم"
+    },
+    {
+        "id": 14,
+        "title": "قصه شماره ۱۴",
+        "audioFile": "assets/audio/story14.mp3",
+        "imageFile": "assets/images/story14.jpg",
+        "duration": "۶:۴۰",
+        "description": "توضیحات کوتاه درباره داستان چهاردهم"
+    },
+    {
+        "id": 15,
+        "title": "قصه شماره ۱۵",
+        "audioFile": "assets/audio/story15.mp3",
+        "imageFile": "assets/images/story15.jpg",
+        "duration": "۵:۵۵",
+        "description": "توضیحات کوتاه درباره داستان پانزدهم"
+    },
+    {
+        "id": 16,
+        "title": "قصه شماره ۱۶",
+        "audioFile": "assets/audio/story16.mp3",
+        "imageFile": "assets/images/story16.jpg",
+        "duration": "۶:۰۵",
+        "description": "توضیحات کوتاه درباره داستان شانزدهم"
+    },
+    {
+        "id": 17,
+        "title": "قصه شماره ۱۷",
+        "audioFile": "assets/audio/story17.mp3",
+        "imageFile": "assets/images/story17.jpg",
+        "duration": "۵:۴۵",
+        "description": "توضیحات کوتاه درباره داستان هفدهم"
+    },
+    {
+        "id": 18,
+        "title": "قصه شماره ۱۸",
+        "audioFile": "assets/audio/story18.mp3",
+        "imageFile": "assets/images/story18.jpg",
+        "duration": "۶:۵۰",
+        "description": "توضیحات کوتاه درباره داستان هجدهم"
+    },
+    {
+        "id": 19,
+        "title": "قصه شماره ۱۹",
+        "audioFile": "assets/audio/story19.mp3",
+        "imageFile": "assets/images/story19.jpg",
+        "duration": "۵:۲۰",
+        "description": "توضیحات کوتاه درباره داستان نوزدهم"
+    },
+    {
+        "id": 20,
+        "title": "قصه شماره ۲۰",
+        "audioFile": "assets/audio/story20.mp3",
+        "imageFile": "assets/images/story20.jpg",
+        "duration": "۷:۱۰",
+        "description": "توضیحات کوتاه درباره داستان بیستم"
+    },
+    {
+        "id": 21,
+        "title": "قصه شماره ۲۱",
+        "audioFile": "assets/audio/story21.mp3",
+        "imageFile": "assets/images/story21.jpg",
+        "duration": "۵:۳۵",
+        "description": "توضیحات کوتاه درباره داستان بیست و یکم"
+    },
+    {
+        "id": 22,
+        "title": "قصه شماره ۲۲",
+        "audioFile": "assets/audio/story22.mp3",
+        "imageFile": "assets/images/story22.jpg",
+        "duration": "۶:۲۵",
+        "description": "توضیحات کوتاه درباره داستان بیست و دوم"
+    },
+    {
+        "id": 23,
+        "title": "قصه شماره ۲۳",
+        "audioFile": "assets/audio/story23.mp3",
+        "imageFile": "assets/images/story23.jpg",
+        "duration": "۵:۱۰",
+        "description": "توضیحات کوتاه درباره داستان بیست و سوم"
+    },
+    {
+        "id": 24,
+        "title": "قصه شماره ۲۴",
+        "audioFile": "assets/audio/story24.mp3",
+        "imageFile": "assets/images/story24.jpg",
+        "duration": "۶:۴۵",
+        "description": "توضیحات کوتاه درباره داستان بیست و چهارم"
+    },
+    {
+        "id": 25,
+        "title": "قصه شماره ۲۵",
+        "audioFile": "assets/audio/story25.mp3",
+        "imageFile": "assets/images/story25.jpg",
+        "duration": "۵:۵۰",
+        "description": "توضیحات کوتاه درباره داستان بیست و پنجم"
+    },
+    {
+        "id": 26,
+        "title": "قصه شماره ۲۶",
+        "audioFile": "assets/audio/story26.mp3",
+        "imageFile": "assets/images/story26.jpg",
+        "duration": "۶:۱۵",
+        "description": "توضیحات کوتاه درباره داستان بیست و ششم"
+    },
+    {
+        "id": 27,
+        "title": "قصه شماره ۲۷",
+        "audioFile": "assets/audio/story27.mp3",
+        "imageFile": "assets/images/story27.jpg",
+        "duration": "۵:۴۰",
+        "description": "توضیحات کوتاه درباره داستان بیست و هفتم"
+    },
+    {
+        "id": 28,
+        "title": "قصه شماره ۲۸",
+        "audioFile": "assets/audio/story28.mp3",
+        "imageFile": "assets/images/story28.jpg",
+        "duration": "۶:۵۵",
+        "description": "توضیحات کوتاه درباره داستان بیست و هشتم"
+    },
+    {
+        "id": 29,
+        "title": "قصه شماره ۲۹",
+        "audioFile": "assets/audio/story29.mp3",
+        "imageFile": "assets/images/story29.jpg",
+        "duration": "۵:۲۵",
+        "description": "توضیحات کوتاه درباره داستان بیست و نهم"
+    },
+    {
+        "id": 30,
+        "title": "قصه شماره ۳۰",
+        "audioFile": "assets/audio/story30.mp3",
+        "imageFile": "assets/images/story30.jpg",
+        "duration": "۷:۰۰",
+        "description": "توضیحات کوتاه درباره داستان سی‌ام"
+    }
+]
